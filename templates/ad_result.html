@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url("{{ url_for('static', filename='ad_img2.png')}}"); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .result {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .input-field {
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sales Prediction Result</h1>
+        <div class="input-field">If you spend ${{ TV }} on TV Advertising </div>
+        <div class="input-field">${{ Billboards }} on Billboards</div>
+        <div class="input-field">and ${{ Google_Ads }} goes in for Google Ads </div>
+        <div class="input-field">${{ Social_Media }} for Social Media</div>
+        <div class="input-field">${{ Influencer_Marketing }} for Influencer Marketing </div>
+        <div class="input-field">and finally ${{ Affiliate_Marketing }} for Affiliate Marketing:</div>
+        <div class="result">you should expect an approximated sale of <strong></strong></div>
+        <div class="result"><strong>${{ prediction }}</strong> per month</div>
+        <div class="footer">Model built by Adesegun Oluwademilade Daniel</div>
+    </div>
+</body>
+</html>
